@@ -27,6 +27,11 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 .env
+config.json
+default.json
+ufitsub-firebase-adminsdk-wc0gi-b51f550850.json
+
+# testing
 
 # CI Pipeline
 .gitlab-ci.yml
