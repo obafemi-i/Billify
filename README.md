@@ -40,6 +40,6 @@ $ feathers generate hook                  # Generate a new Hook
 $ feathers help                           # Show all commands
 ```
 
-## Help
+<!-- ## Help
 
-For the api doc. please visit  visit [HNS API DOC](https://documenter.getpostman.com/view/3557887/UzBvG3B3).
+For the api doc. please visit  visit [HNS API DOC](https://documenter.getpostman.com/view/3557887/UzBvG3B3). -->
