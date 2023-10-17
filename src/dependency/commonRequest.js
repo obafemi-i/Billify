@@ -1,7 +1,4 @@
-const mailgun = require("mailgun-js")({
-  apiKey: "25e05bf5740ddb803a36e1333b0ff413-b2f5ed24-d9536a99",
-  domain: "mg.krib.ng",
-});
+
 const sgMail = require("@sendgrid/mail");
 const twilio = require('twilio');
 
