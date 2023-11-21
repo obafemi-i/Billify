@@ -78,8 +78,8 @@ app.use(express.notFound());
 app.use(express.errorHandler({ logger }));
 
 app.hooks(appHooks);
-// const transaction = Sentry.startTransaction({
-//   op: "test",
-//   name: "My First Test Transaction",
-// });
+const transaction = Sentry.startTransaction({
+  op: "test",
+  name: "My First Test Transaction",
+});
 module.exports = app;
