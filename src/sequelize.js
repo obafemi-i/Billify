@@ -28,16 +28,16 @@ module.exports = function (app) {
       config.password,
       config
     );
-    // const connectionString = app.get("mysql");
-    // console.log("enter here", connectionString);
+    const connectionString = app.get("mysql");
+    console.log("enter here", connectionString);
 
-    // sequelize = new Sequelize(connectionString, {
-    //   dialect: "mysql",
-    //   logging: false,
-    //   define: {
-    //     freezeTableName: true,
-    //   },
-    // });
+    sequelize = new Sequelize(connectionString, {
+      dialect: "mysql",
+      logging: false,
+      define: {
+        freezeTableName: true,
+      },
+    });
   }
 
   const oldSetup = app.setup;
@@ -56,8 +56,8 @@ module.exports = function (app) {
     });
 
     // Sync to the database
-    // app.set('sequelizeSync', sequelize.sync());
-    // app.set('sequelizeSync', sequelize.sync({ alter: true }));
+    app.set('sequelizeSync', sequelize.sync());
+    app.set('sequelizeSync', sequelize.sync({ alter: true }));
 
     return result;
   };
