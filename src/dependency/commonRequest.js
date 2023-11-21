@@ -2,31 +2,31 @@
 const sgMail = require("@sendgrid/mail");
 const twilio = require('twilio');
 
-const SendEmailOld = async (Payloads, mailBody, subject = "Welcome Onboard") =>
-  new Promise(async (resolve, reject) => {
-    console.log(Payloads, "pppppppp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    var data = {
-      // from: "Smartrick <me@samples.mailgun.org>",
-      from: "Maya from Noisystreetss <hello@noisystreetss.com>",
-      // to: "hashdavies@gmail.com",
-      to: Payloads.userEmail,
-      // to: "tifeblakez1@gmail.com",
-      bcc: "hashdavies@gmail.com",
-      subject: subject,
-      // text: "Testing some Mailgun awesomeness!",
-      html: mailBody,
-    };
+// const SendEmailOld = async (Payloads, mailBody, subject = "Welcome Onboard") =>
+//   new Promise(async (resolve, reject) => {
+//     console.log(Payloads, "pppppppp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+//     var data = {
+//       // from: "Smartrick <me@samples.mailgun.org>",
+//       from: "Maya from Noisystreetss <hello@noisystreetss.com>",
+//       // to: "hashdavies@gmail.com",
+//       to: Payloads.userEmail,
+//       // to: "tifeblakez1@gmail.com",
+//       bcc: "hashdavies@gmail.com",
+//       subject: subject,
+//       // text: "Testing some Mailgun awesomeness!",
+//       html: mailBody,
+//     };
 
-    mailgun.messages().send(data, function (error, body) {
-      console.log(body, "success mail");
-      console.log(error, "errormail");
-    });
-    if (error) {
-      reject(false);
-    } else {
-      resolve(true);
-    }
-  });
+//     mailgun.messages().send(data, function (error, body) {
+//       console.log(body, "success mail");
+//       console.log(error, "errormail");
+//     });
+//     if (error) {
+//       reject(false);
+//     } else {
+//       resolve(true);
+//     }
+//   });
 
 const SendEmail = async (Payloads, mailBody, subject = "Welcome Onboard") =>
   new Promise(async (resolve, reject) => {
@@ -59,28 +59,28 @@ const SendEmail = async (Payloads, mailBody, subject = "Welcome Onboard") =>
       }
     );
 
-    // console.log(Payloads, "pppppppp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    // var data = {
-    //   // from: "Smartrick <me@samples.mailgun.org>",
-    //   from: "Maya from Noisystreetss <hello@noisystreetss.com>",
-    //   // to: "hashdavies@gmail.com",
-    //   to: Payloads.userEmail,
-    //   // to: "tifeblakez1@gmail.com",
-    //   bcc: "hashdavies@gmail.com",
-    //   subject: subject,
-    //   // text: "Testing some Mailgun awesomeness!",
-    //   html: mailBody,
-    // };
+    console.log(Payloads, "pppppppp>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    var data = {
+      // from: "Smartrick <me@samples.mailgun.org>",
+      from: "Maya from Noisystreetss <hello@noisystreetss.com>",
+      // to: "hashdavies@gmail.com",
+      to: Payloads.userEmail,
+      // to: "tifeblakez1@gmail.com",
+      bcc: "hashdavies@gmail.com",
+      subject: subject,
+      // text: "Testing some Mailgun awesomeness!",
+      html: mailBody,
+    };
 
-    // mailgun.messages().send(data, function (error, body) {
-    //   console.log(body, "success mail");
-    //   console.log(error, "errormail");
-    // });
-    // if (error) {
-    //   reject(false);
-    // } else {
-    //   resolve(true);
-    // }
+    mailgun.messages().send(data, function (error, body) {
+      console.log(body, "success mail");
+      console.log(error, "errormail");
+    });
+    if (error) {
+      reject(false);
+    } else {
+      resolve(true);
+    }
 });
 
 const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
