@@ -19,7 +19,7 @@ module.exports = (options = {}) => {
       "Conflict",
       "Unprocessable",
       "NetworkError",
-      "Timeout",
+      "myCustomError"
     ];
     if (handledErrorNames.includes(error?.name)) {
       const statusCode = error?.code || 500;
