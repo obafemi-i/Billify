@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
-// const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN_KEY);
-const serviceAccount = require("./ufitsub-firebase-adminsdk-wc0gi-b51f550850.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN_KEY);
+// const serviceAccount = require("./ufitsub-firebase-adminsdk-wc0gi-b51f550850.json");
 
 console.log(serviceAccount);
 admin.initializeApp({
